@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 1.0
+apiversion: 2
+description: SpeechRecognizer lets you user the Android native speech recognition. Once active, your app will listen to user speech and fire appropriate javascript callbacks.
+author: Ophir Oren
+license: Commercial
+copyright: Copyright (c) 2013 by Ophir Oren
+
+
+# these should not be edited
+name: speech_recognizer
+moduleid: co.il.webe.speechrecognizer
+guid: 712a1fdf-c0d2-4fd6-9b03-b5012f6a8a53
+platform: android
+minsdk: 2.1.3.GA

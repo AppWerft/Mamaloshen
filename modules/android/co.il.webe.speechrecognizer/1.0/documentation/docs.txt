@@ -1,0 +1,141 @@
+# SpeechRecognizer Module
+
+## Description
+
+SpeechRecognizer lets you user the Android native speech recognition. Once active, your app will listen to user speech and fire appropriate javascript callbacks.
+
+## Accessing the smslistener Module
+
+To access this module from JavaScript, you would do the following:
+
+	var speechRecognizer = require('co.il.webe.speechrecognizer');
+
+The speechRecognizer variable is a reference to the Module object.	
+
+
+### ___PROJECTNAMEASIDENTIFIER__.getSpeechRecognizer(obj)
+
+The getSpeechRecognizer function returns a SpeechRecognizerProxy that you will use to interact with the speech service.
+It receives one object argument that define the callback functions to call when the service fires an event.
+
+Usage Example:
+
+	var speechRecognizerProxy = speechRecognizer.getSpeechRecognizer({
+		onResults: function(e) {
+			Ti.API.info('Results:');
+			if (e.words) {
+				for (var i = 0; i < e.words.length; i++) {
+					Ti.API.info('e.words[' + i + '] = ' + e.words[i]);
+				}
+			}
+		},
+		onReadyForSpeech: function(e) {
+			Ti.API.info('Ready for speech');
+		},
+		onPartialResults: function(e) {
+			Ti.API.info('Partial Results:');
+			if (e.words) {
+				for (var i = 0; i < e.words.length; i++) {
+					Ti.API.info('e.words[' + i + '] = ' + e.words[i]);
+				}
+			}
+		},
+		onError: function(e) {
+			switch (e.errorCode) {
+				case speechRecognizer.ERROR_AUDIO:
+					Ti.API.error('ERROR_AUDIO');
+					break;
+				
+				case speechRecognizer.ERROR_CLIENT:
+					Ti.API.error('ERROR_CLIENT');
+					break;
+				
+				case speechRecognizer.ERROR_INSUFFICIENT_PERMISSIONS:
+					Ti.API.error('ERROR_INSUFFICIENT_PERMISSIONS');
+					break;
+				
+				case speechRecognizer.ERROR_NETWORK:
+					Ti.API.error('ERROR_NETWORK');
+					break;
+				
+				case speechRecognizer.ERROR_NETWORK_TIMEOUT:
+					Ti.API.error('ERROR_NETWORK_TIMEOUT');
+					break;
+				
+				case speechRecognizer.ERROR_NO_MATCH:
+					Ti.API.error('ERROR_NO_MATCH');
+					break;
+				
+				case speechRecognizer.ERROR_RECOGNIZER_BUSY:
+					Ti.API.error('ERROR_RECOGNIZER_BUSY');
+					break;
+				
+				case speechRecognizer.ERROR_SERVER:
+					Ti.API.error('ERROR_SERVER');
+					break;
+				
+				case speechRecognizer.ERROR_SPEECH_TIMEOUT:
+					Ti.API.error('ERROR_SPEECH_TIMEOUT');
+					break;
+			}
+		},
+		onEndOfSpeech: function(e) {
+			Ti.API.info('End of speech');
+		},
+		onBeginningOfSpeech: function(e) {
+			Ti.API.info('Beginning of speech');
+		},
+	});
+
+Callback functions are available only when the app is active and only when in listening mode.
+
+
+SpeechRecognizerProxy:
+
+### ___ SpeechRecognizerProxy__.startListening()
+
+Starts listening for input coming from the users mic. Once listening callback functions that were defined during proxy creation will be fired accordingly.
+
+Usage Example:
+
+	speechRecognizerProxy.startListening();
+
+
+### ___ SpeechRecognizerProxy__.stopListening()
+
+The speech recognition service should stop by itself when detecting the end of speech (causing the 'onEndOfSpeech' callback function to fire),
+but in case you need to, you can stop listening for speech by calling the 'stopListening' method.
+
+### ___ SpeechRecognizerProxy__.setLanguage
+### ___ SpeechRecognizerProxy__.getLanguage
+
+The 'language' property tells the service which language to listen to. If not set it will listen to the language defined by the user device settings.
+The module supports languages supported by the native speech recognition service.
+
+Usage Example:
+	
+	speechRecognizerProxy.setLanguage('en-US');
+	OR
+	speechRecognizerProxy.language = 'en-US';
+
+	var language = speechRecognizerProxy.getLanguage();
+	OR
+	var language = speechRecognizerProxy.language;
+
+
+## Author
+
+Copyright (c) 2013 Ophir Oren
+If you have further question or request you may contact me at ophir.oren@gmail.com
+Please make sure to visit my website at http://www.webe.co.il
+
+
+## License
+
+Copyright (c) 2013 Ophir Oren
+SpeechRecognizer created by Ophir Oren 2013 for Appcelerator Titanium developers.
+
+Permission is hereby granted to use this software and associated documentation files (the "Software"), to any person who purchases a license though the Appcelerator Titanium Marketplace, to use on the apps he/she develops.
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE
