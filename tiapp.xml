@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
     <id>de.appwerft.mamaloshen</id>
-    <name>Mamaloshen</name>
+    <name>Phrases ✜ Phrasen</name>
     <version>1.0</version>
     <publisher>rainerschleevoigt</publisher>
     <url>http://</url>
@@ -48,9 +48,7 @@
         <theme>default</theme>
     </mobileweb>
     <modules>
-        <module platform="android" version="0.3">org.mumumu.ti.android.speech</module>
-        <module platform="org.mumumu.ti.android.speech">org.mumumu.ti.android.speech</module>
-        <module platform="android" version="2.0">jp.isisredirect.speechrecognizer</module>
+        <module platform="android">jp.isisredirect.speechrecognizer</module>
     </modules>
     <deployment-targets>
         <target device="android">true</target>
@@ -60,5 +58,5 @@
         <target device="mobileweb">false</target>
         <target device="tizen">false</target>
     </deployment-targets>
-    <sdk-version>3.2.0.evalJSpatch</sdk-version>
+    <sdk-version>3.2.2.GA</sdk-version>
 </ti:app>
