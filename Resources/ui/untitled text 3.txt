@@ -1,0 +1,109 @@
+var ideomes = [
+{
+'to take the chair': 'den Vorsitz führen '
+}, {
+'Just imagine!': 'Denken Sie`s. nur! '
+}, {
+'The motion was defeated.': 'Der Antrag wurde abgelehnt.'
+}, {
+'the only way out': 'Der einzige Ausweg'
+}, {
+'the gravity of the situation': 'der Ernst der Situation '
+}, {
+'The plan failed': 'Der Plan scheiterte. '
+}, {
+'to go into the matter': 'der Sache nachgehen '
+}, {
+'appearances are deceiving': 'der Schein trügt '
+}, {
+'The sense escapes me': 'Der Sinn leuchtet mir nicht ein. '
+}, {
+"That's why you're here": 'Deswegen sind Sie hier. '
+}, {
+'the general public': 'die Allgemeinheit'
+}, {
+'The dust has settled.': 'Die Aufregung hat sich gelegt. '
+}, {
+'to keep one\'s countenance': 'die Fassung bewahren'
+}, {
+'The question doesn\'t arise.': 'Die Frage ist belanglos. '
+}, {
+'all along': 'die ganze Zeit '
+}, {
+'to lose one\'s temper': 'die Geduld verlieren '
+}, {
+'The opportunity arises': 'Die Gelegenheit bietet sich'
+}, {
+'to jump at the chance': 'die Gelegenheit ergreifen'
+}, {
+'to miss the opportunity': 'die Gelegenheit verpassen '
+}, {
+'todays arrangements': 'die heutigen Veranstaltungen '
+}, {
+'to count the cost': 'die Kosten berechnen '
+}, {
+'to overestimate the costs': 'die Kosten überschätzen'
+}, {
+'The disease is contagious.': 'Die Krankheit ist ansteckend.'
+}, {
+'The disease is contagious.': 'Die Lage retten '
+}, {
+'The line is busy.': 'Die Leitung ist besetzt. '
+}, {
+'the answer to a problem': 'Die Lösung eines Problems '
+}, {
+'The noes have it. ': 'Die Mehrheit ist dagegen.'
+}, {
+'Prices are on the decrease.': 'Die Preise sinken. '
+}, {
+'Prices continued to rise.': 'Die Preise stiegen weiter. '
+}, {
+'to keep calm': 'Die Ruhe bewahren '
+}, {
+"I don't like the look of it.": "Die Sache gefällt mir nicht. "
+}, {
+"to know the ropes": "die Spielregeln kennen "
+}, {
+"to spend the time ": "die Zeit verbringen "
+}, {
+"Times have changed": "Die Zeiten haben sich geändert. "
+}, {
+"to be on duty": "Dienst haben"
+}, {
+"Such thoughts are alien to him.": "Diese Gedankengänge sind ihm fremd. "
+}, {
+"That fact escaped me. ": "Diese Tatsache entging mir. "
+}, {
+"this particular case ": "dieser spezielle Fall "
+}, {
+"to keep things to oneself ": "Dinge für sich behalten "
+}, {
+"Dear me! ": "Du liebe Zeit! "
+}, {
+"Bless my heart! ": "Du meine Güte! "
+}, {
+"You've got me wrong. ": "Du verstehst mich falsch."
+}, {
+"to submit an offer ": "ein Angebot unterbreiten "
+}, {
+"to break off a conversation ": "ein Gespräch abbrechen "
+}, {
+"to conduct a conversation ": "ein Gespräch führen "
+}, {
+"a stroke of luck ": "ein Glücksfall"
+}, {
+"a long way round ": "ein großer Umweg"
+}, {
+"a good stroke of business": "ein gutes Geschäft"
+}, {
+"a means to an end ": "ein Mittel zum Zweck"
+}, {
+"to promote a project ": "ein Projekt fördern "
+}, {
+"to carry weight ": "Eindruck machen"
+}, {
+"to make a complaint": "eine Beschwerde vorbringen"
+}, {
+"an approved method": "eine bewährte Methode"
+}
+];

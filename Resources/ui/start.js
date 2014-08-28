@@ -1,10 +1,11 @@
 var Ideomes = require('controls/ideomes');
 var speechrecognizerModule = require('jp.isisredirect.speechrecognizer');
 var speechrecognizer = speechrecognizerModule.createSpeechRecognizer();
+speechrecognizer['language_preference'] = 'en-US';
+
 Ideomes.Init();
 
 var self = Ti.UI.createWindow({
-	fullscreen : true,
 	exitOnClose : true,
 	backgroundColor : 'black'
 });
@@ -53,15 +54,11 @@ speechrecognizer.addEventListener(speechrecognizerModule.READYFORSPEECH, functio
 speechrecognizer.addEventListener(speechrecognizerModule.RESULTS, function(e) {
 	console.log(e.results);
 	if (e.results && e.results.split(',')[0]) {
-
 		var opts = {
 			options : e.results.split(','),
-			title : 'possible interpretations'
+			title : 'Possible interpretations'
 		};
-
 		Ti.UI.createOptionDialog(opts).show();
-		
-		
 	}
 	speechrecognizer.stop();
 	//
